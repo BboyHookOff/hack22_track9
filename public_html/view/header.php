@@ -21,7 +21,7 @@
                 <span class="dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown">Привет, <?=$_COOKIE['name']?></span>
             <?php endif;?>  
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Личные данные</a></li>
+              <li data-toggle="modal" data-target="#exampleModal"><a class="dropdown-item" href="#">Личные данные</a></li>
               <li><a class="dropdown-item" href="/my_flowers.php">Мои растения</a></li>
               <li><a class="dropdown-item" href="/exit.php">Выйти</a></li>
             </ul>
@@ -32,7 +32,29 @@
       </div>
     </header>
 
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Мои данные</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <?php include"db_connects/lk.php"; ?>
+        <div><strong>Логин:</strong> <?=$row['login'];?></div>
+        <br/>
+        <div><strong>Имя:</strong> <?=$row['name'];?></div>
+        <br/>
+        <div><strong>Личный код:</strong> <?=$row['guid'];?></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
 
     <img id="burger" class="d-lg-none" src="gallery/burger.png" alt="BURGER!">
     <div class="sidebar d-lg-none d-flex flex-column w-100">
@@ -45,7 +67,7 @@
                 <span class="dropdown-toggle" id="dropdownMenuButton1" data-toggle="dropdown">Привет, <?=$_COOKIE['name']?></span>
             <?php endif;?>  
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Личные данные</a></li>
+              <li data-toggle="modal" data-target="#exampleModal"><a class="dropdown-item" href="#">Личные данные</a></li>
               <li><a class="dropdown-item" href="/my_flowers.php">Мои растения</a></li>
               <li><a class="dropdown-item" href="/exit.php">Выйти</a></li>
             </ul>
@@ -80,7 +102,7 @@
         filter: drop-shadow(0 6px 6px #00000060);
         transform: translateY(-100%);
         }
-        
+
       .show_sb{
         transform: translateY(0%);
       }
@@ -95,7 +117,7 @@
       background-color: var(--background_green_0);
     }
     .hide_head{
-      transform: translateY(-80px);
+      transform: translateY(-100px);
     }
     .dropdown-menu{
       margin-top: 10px;

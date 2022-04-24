@@ -83,6 +83,9 @@
         .point:hover{
             transform: scale(1.1);
         }
+        .notes-form > input, .notes-form > textarea{
+            margin-bottom: 10px;
+        }
         .point:active{
             transform: scale(0.95);
         }
@@ -129,12 +132,13 @@
     <title>"Flower Steps"</title>
 </head>
 
-<body class="d-flex flex-column justify-content-center align-items-center">
+<body>
+    <div class="container-fluid">
     <?php
     include 'view/header.php';
     include 'db_connects/db_steps.php';
     ?>
-    <div style="margin-top: 200px;" class="steps-container d-flex flex-column justify-content-center align-items-center">
+    <div class="container steps-container d-flex flex-column justify-content-center align-items-center">
         <h2>Этап роста</h2>
         <span>*<?=$row_history['name'];?>*</span>
         <span>Следующий полив через <?=$time_water_hour;?> часов.</span>
@@ -194,9 +198,28 @@
                 <?php include 'db_connects/inf_step4.php';?>
             </div>
         </div>
+        <div style="width: 100%;">
+                <br/>
+                <h3><strong>Сделать заметку.</strong></h3>
+                    <form class="notes-form" action="db_connects/db_note.php" method="post">
+                        <input type="text" class="form form-control" placeholder="Заголовок" name="name">
+                        <input type="text" class="form form-control" placeholder="Url картинки" name="image">
+                        <input type="hidden" class="form form-control" name="id_history" value="<?=$_GET['id'];?>">
+                        <input type="hidden" class="form form-control" name="id_user" value="<?=$row_history['id_user'];?>">
+                        <textarea type="text" class="form form-control" placeholder="Заметка..." name="inf"></textarea>
+                         <span>Выберите этап</span>
+                        <select name="step" class="form-select" required>
+                          <option selected value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                        </select>
+                        <input type="submit"  class="btn btn-success" value="Сохранить">
+                    </form>
+            </div>
+        </div>
+    <?php include 'view/footer.php';?>
     </div>
-        <?php include 'view/footer.php';?>
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <!-- <script src='assets/js/script.js'></script> -->

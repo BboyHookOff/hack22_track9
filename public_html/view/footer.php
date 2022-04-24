@@ -4,7 +4,7 @@
          <div class="row d-flex justify-content-between h-100 transform">
             <div class="col-4 d-flex flex-column justify-content-between h-100" style="height: 150px !important">
                <h5 style="user-select: none; text-decoration: underline;">Navigation</h5>
-               <a href="">О нас</a>
+               <a href="http://v845316.hosted-by-vdsina.ru/index.php#about">О нас</a>
                <a href="">Каталог</a>
                <a href="">Личные данные</a>
             </div>

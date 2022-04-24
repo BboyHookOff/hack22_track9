@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="assets/css/default.css">
   <link rel="stylesheet" href="assets/css/style.css">
    <title>Document</title>
+   <style>
+     
+   </style>
 </head>
 <body>
    <?php
@@ -25,16 +28,7 @@
             </p>
             <form action="db_connects/add_flow.php" method="post">
             <input type="hidden" value="<?=$_GET['id']?>" name="id">
-            <input style="font-size: 26px;
-            text-transform: uppercase;
-            padding: 14px 28px;
-            border: 3px solid lightgreen;
-            margin: 0 10px;
-            margin-top: 50px;
-            background-color: #0000005c;
-            color: lightgreen;
-            border-radius: 40px;
-            transition: all 0.25s;" type="submit" value="Добавить">
+            <input class="clever_btn" type="submit" value="Добавить">
           </form>
          </div>
       </div>
@@ -46,30 +40,32 @@
          <button class="tabs-btn" data-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false">Удобрения</button>
       </div>
         <div class="collapse show" id="collapseExample1">
-           <div class="card card-body">
+           <div class="card card-body"  style="line-height:28px; font-size: 17px;">
               <?=$result_inf['climate']?>
            </div>
         </div>
         <div class="collapse" id="collapseExample2">
-           <div class="card card-body">
+           <div class="card card-body"  style="line-height:28px; font-size: 17px;">
               <?=$result_inf['light']?>
            </div>
         </div>
         <div class="collapse" id="collapseExample3">
-           <div class="card card-body">
+           <div class="card card-body"  style="line-height:28px; font-size: 17px;">
               <?=$result_inf['water']?>
            </div>
         </div>
         <div class="collapse" id="collapseExample4">
-           <div class="card card-body">
+           <div class="card card-body" style="line-height:28px; font-size: 17px;">
               <?=$result_inf['fertilize']?>
            </div>
         </div>
       </div>
-      <?php
-      include 'view/footer.php';
-      ?>
    </div>
+
+      <?php
+        include 'view/footer.php';
+      ?>
+
      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
    <script type="text/javascript">

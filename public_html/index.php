@@ -50,12 +50,12 @@
               <a href="#footer"><button>Информация</button></a>
               <button>Топ растений</button>
               <button type="button" class="d-none btn btn-primary" id="liveToastBtn" >Показать лайв тосты</button>
-
-<div class="position-fixed top-0 end-0 p-3" style="z-index: 5" >
-  <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+            </span>
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 20; position: absolute; top: 100px; right: 0; transition: all 0.3s" >
+  <div style="display: block !important; opacity: 1 !important; transition: all 0.3s" id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
     <div class="toast-header">
       <img src="..." class="rounded me-2" alt="...">
-      <strong class="me-auto">Bootstrap</strong>
+      <strong class="me-auto">Сообщение</strong>
       <small>11 мин назад</small>
       <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
     </div>
@@ -64,7 +64,6 @@
     </div>
   </div>
 </div>
-            </span>
           </div>
         </section>
         <section class="main-block2 d-flex align-items-center">
@@ -102,6 +101,7 @@
           <iframe src="3d/index.html" frameborder="0" style="width: 100%;height: 560px;"></iframe>
           <hr class="iframe_spliter">
         </section>
+        
       </main>
 
       <?php
