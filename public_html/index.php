@@ -34,6 +34,19 @@
   </style>
 </head>
 <body>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 20; position: absolute; top: 100px; right: 0; transition: all 0.3s" >
+  <div style="display: block !important; opacity: 1 !important; transition: all 0.3s" id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast-header">
+      <!-- <img src="..." class="rounded me-2" alt="..."> -->
+      <strong class="me-auto">Уведомление</strong>
+      <small style="margin-left: 15px;">1 сек. назад</small>
+      <button style="margin-left: 90px;" type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"><strong>X</strong></button>
+    </div>
+    <div class="toast-body">
+      Не забудьте полить "Сирень" через 1 час!
+    </div>
+  </div>
+</div>
   <div class="container-fluid">
     <?php
     include 'view/header.php';
@@ -51,19 +64,6 @@
               <button>Топ растений</button>
               <button type="button" class="d-none btn btn-primary" id="liveToastBtn" >Показать лайв тосты</button>
             </span>
-            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 20; position: absolute; top: 100px; right: 0; transition: all 0.3s" >
-  <div style="display: block !important; opacity: 1 !important; transition: all 0.3s" id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-      <img src="..." class="rounded me-2" alt="...">
-      <strong class="me-auto">Сообщение</strong>
-      <small>11 мин назад</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Закрыть"></button>
-    </div>
-    <div class="toast-body">
-      Привет, мир! Это тост-сообщение.
-    </div>
-  </div>
-</div>
           </div>
         </section>
         <section class="main-block2 d-flex align-items-center">
@@ -71,13 +71,11 @@
             <div class="main2-contentChild1">
               <h2 id="about">О нас</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Fugit quam eos debitis excepturi rem repellat veritatis 
-                blanditiis nobis? Ratione porro alias maiores eos possimus 
-                sit quibusdam, ipsum ut unde optio.
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                Voluptate rem placeat temporibus, fugiat voluptatibus repudiandae 
-                dignissimos adipisci quam soluta voluptates?
+                Вы решили завести растение, но не знаете как это сделать?
+                Благодаря нашему мощному сервису, Вы можете без особого труда вести
+                учет выращиваемых культур, всегда найти ценную и полезную информацию
+                от лучших садоводов, а также не забывать про полив растения, вести заметки по каждому 
+                из этапов роста и получать рекомендации по уходу за растениями. Доверьтесь нам :).
               </p>
             </div>
             <div class="row main2-contentChild2 text-left">
