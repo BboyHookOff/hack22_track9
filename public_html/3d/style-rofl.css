@@ -1,0 +1,266 @@
+:root {
+  --scenePerspective: 1;
+  --scenePerspectiveOriginX: 50;
+  --scenePerspectiveOriginY: 30;
+  --itemZ: 2;
+  --cameraSpeed: 330;
+  --cameraZ: 0;
+  --viewportHeight: 0;
+}
+@keyframes fade-down{
+  100%{
+    transform: translateY(40px);
+    opacity: 0;
+  }
+}
+body::-webkit-scrollbar{
+  width: 0px;
+}
+a>button{
+  color: white;
+    font-size: 25px;
+    font-weight: 600;
+    border-radius: 16px;
+    padding: 8px 20px;
+    border: 1.5px solid white;
+    background-color: #ffffff70;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+a>button:hover{
+  transform: scale(1.05);
+  background-color: #ffa81de4;
+  border: 1.5px solid #ffa81de4;
+
+}
+#prev{
+  opacity: 1;
+  transition: all 1.5s;
+}
+.viewport {
+  height: calc(var(--viewportHeight) * 1px);
+}
+.viewport .scene3D-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  perspective: calc(var(--scenePerspective) * var(--cameraSpeed) * 1px);
+  perspective-origin: calc(var(--scenePerspectiveOriginX) * 1%) calc(var(--scenePerspectiveOriginY) * 1%);
+  will-change: perspective-origin;
+  transform: translate3d(0, 0, 0);
+  opacity: 0.9;
+}
+.viewport .scene3D-container .scroll_me{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  color: var(--background_green_3);
+  font-size: 32px;
+  letter-spacing: 3px;
+}
+.viewport .scene3D-container .scroll_me>h3{
+  margin: 0;
+    text-transform: uppercase;
+    font-size: 45px;
+    color: white;
+    text-shadow: 0px 1.5px 3px black;
+}
+.viewport .scene3D-container .scroll_me>img{
+  width: 65px;
+  height: 50px;
+  margin: 8px;
+  filter: brightness(3.5);
+  animation: fade-down 1.5s 0s infinite;
+}
+.viewport .scene3D-container .scene3D {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  transform-style: preserve-3d;
+  transform: translateZ(calc(var(--cameraZ) * 1px));
+  will-change: transform;
+}
+.viewport .scene3D-container .scene3D > div {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 600px) {
+  .viewport .scene3D-container .scene3D > div {
+    width: 45%;
+    /* opacity: 0; */
+  }
+}
+.viewport .scene3D-container .scene3D > div:nth-child(2n) {
+  left: 0;
+  background-color: #373636;
+  filter: drop-shadow(6px 6px 10px #ffffff20);
+}
+.viewport .scene3D-container .scene3D > div:nth-child(2n + 1) {
+  right: 0;
+  background-color: #373636;
+  filter: drop-shadow(-6px 6px 10px #ffffff20);
+}
+.viewport .scene3D-container .scene3D > div:nth-child(0) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 0 * -1px));
+  opacity: calc();
+}
+.viewport .scene3D-container .scene3D > div:nth-child(1) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 1 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(2) {
+  transform: translate3D(10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 2 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(3) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 3 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(4) {
+  transform: translate3D(10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 4 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(5) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 5 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(6) {
+  transform: translate3D(10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 6 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(7) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 7 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(8) {
+  transform: translate3D(10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 8 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(9) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 9 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(10) {
+  transform: translate3D(10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 10 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(11) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 11 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(12) {
+  transform: translate3D(10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 12 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(13) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 13 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(14) {
+  transform: translate3D(10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 14 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(15) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 15 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(16) {
+  transform: translate3D(10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 16 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(17) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 17 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(18) {
+  transform: translate3D(10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 18 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(19) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 19 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(20) {
+  transform: translate3D(10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 20 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(21) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 21 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(22) {
+  transform: translate3D(10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 22 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(23) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 23 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(24) {
+  transform: translate3D(10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 24 * -1px));
+}
+.viewport .scene3D-container .scene3D > div:nth-child(25) {
+  transform: translate3D(-10%, -30%, calc(var(--itemZ) * var(--cameraSpeed) * 25 * -1px));
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #272935;
+  color: #272935;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'monserrat';
+  font-size: 1.5rem;
+  color: white;
+  margin: 0;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  text-align: center;
+}
+h1 .logo {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+.link {
+  color: white;
+  margin: 0;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1;
+}
+
+.scene3D > div {
+  padding: 2rem;
+  width: 500px !important;
+    height: 820px;
+    border-radius: 5%;
+}
+hr{
+  background: -moz-linear-gradient(left,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+background: -webkit-linear-gradient(left,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+background: linear-gradient(to right,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+  width: 100%;
+  height: 2px;
+  border-radius: 50%;
+  margin: 10px;
+}
+.scene3D > div h3 {
+  margin: 0;
+    font-family: 'montserrat';
+    font-size: 3rem;
+    color: white;
+    letter-spacing: 1.5px;
+    font-weight: 500;
+}
+.scene3D > div p {
+  margin-top: 15px;
+    font-family: 'montserrat';
+    font-size: 1.2rem;
+    line-height: 32px;
+    color: white;
+    text-align: center;
+}

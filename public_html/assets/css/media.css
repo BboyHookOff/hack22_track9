@@ -1,0 +1,13 @@
+@media only screen and (max-width: 992px){
+   .catalog{
+      width: 80% !important;
+   }
+}
+@media (max-width: 600px) {
+   .main-block2{
+      height: auto;
+   }
+   .main2-content{
+      margin: 15px 0;
+   }
+}

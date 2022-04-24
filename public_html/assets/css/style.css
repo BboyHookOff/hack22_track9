@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+/* Страница авторизации Начало*/
+.frame{
+   background: rgb(0, 189, 0);
+   width: 100%;
+   height: 100%;
+   color: white;
+}
+.frame p{
+   font-size: 20px;
+   font-weight: bold;
+}
+.frame form{
+   width: 450px;
+    height: 450px;
+    background-color: black;
+    margin: 0 auto;
+    padding: 60px 80px;
+}
+.frame form input{
+   border: solid gray 1px;
+   width: 100%;
+   height: 35px;
+}
+.frame form button{
+   height: 30px;
+}
+/* Страница авторизации Конец*/
+
+
+.frame{
+   background: rgb(0, 189, 0);
+   width: 100%;
+   height: 100%;
+   color: white;
+}
+.frame p{
+   font-size: 20px;
+   font-weight: bold;
+}
+.frame form{
+   width: 400px;
+   height: 300px;
+   background-color: black;
+   margin: 0 auto;
+   padding: 30px;
+}
+.frame form input{
+   border: solid gray 1px;
+   width: 100%;
+   height: 35px;
+}
+.frame form button{
+   height: 30px;
+}
+/* Страница авторизации Конец*/
+
+/* Страница Каталог Начало */
+main h3{
+   font-size: 30px;
+   font-weight: 500;
+}
+main ul{
+   color: var(--background_black);
+   height: 100%
+}
+main ul > h5{
+   font-size: 23px;
+   color: rgb(110, 110, 110);
+   font-weight: 500;
+}
+main ul > li{
+   font-size: 20px;
+}
+main h3{
+   color: var(--background_black);
+}
+.catalog-category{
+   width: 40%;
+   height: 250px;
+   margin-top: 80px;
+   position: sticky;
+   top: 40px;
+   left: 0;
+}
+.catalog-element{
+   display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    min-width: 210px;
+    width: 200px;
+    height: 350px;
+    background-color: rgb(241, 241, 241);
+    border-radius: 15px;
+    color: var(--background_black);
+    margin-left: 1px;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: all 0.2s;
+}
+.catalog-element:hover{
+  filter: drop-shadow(0 4px 8px #00000060);
+}
+.catalog-element button{
+   border-radius: 20px;
+   background-color: white;
+   border: solid gray 1px;
+   width: 80%;
+   height: 40px;
+   transition: all 0.3s;
+}
+.catalog-element button a{color: inherit;}
+.catalog-element button:hover{
+  background-color: var(--background_green_0);
+  color: white;
+  transform: scale(1.05);
+}
+.catalog-element button:active{
+  transform: scale(0.95);
+}
+@media (max-width: 440px){
+  .catalog-category{
+   width: 40%;
+    height: 340px;
+    margin-top: 80px;
+  }
+  main ul > li{
+    font-size: 14.5px;
+  }
+  .flower-img{
+    width: 140px !important;
+    height: 140px !important;
+  }
+  .catalog-element{
+    padding: 4px;
+    min-width: 150px;
+    width: 150px;
+    height: 300px;
+  }
+  main ul > h5{
+    font-size: 21px;
+  }
+}
+/* Страница Каталог Начало */
+
+
+/* Страница карточек цветов Начало */
+.flower-main{
+   margin-top: 180px;
+   width: 100%;
+   height: auto;
+}
+.flower-child1 img{
+ width: 50%;
+ height: 100%;
+ border-radius: 15px;
+}
+.flower-text{
+   width: 50%;
+   height: 400px;
+   padding: 20px;
+}
+.flower-child2{
+   width: 100%;
+   height: 50px;
+   background-color: rgb(212, 212, 212);
+   border-radius: 10px;
+   margin-top: 50px;
+}
+.flower-child2 button{
+   width: 150px;
+   height: 100%;
+   border-radius: 10px;
+   background-color: rgb(212, 212, 212);
+}
+.flower-child2 button:active{
+   background-color: green;
+}
+.flower-text h3{
+   font-size: 35px;
+   font-weight: 500;
+   margin-top: 15px;
+}
+.flower-text p{
+   font-size: 20px;
+   line-height: 25px;
+   margin-top: 40px;
+}
+/* Страница карточек цветов Конец */
+
+/* Страница Мои растения Начало */
+.my-flower-main{
+   margin-top: 150px;
+   width: 100%;
+   height: 650px;
+}
+.my-flower-main h2{
+   font-size: 40px;
+   font-weight: 500;
+}
+.my-flower-child{
+   width: 100%;
+   height: 60px;
+   box-shadow: 0px 0px 15px 3px gray;
+   border-radius: 15px;
+}
+.my-flower-child img{
+   width: 45px;
+   height: 45px;
+   margin-right: 15px;
+
+   border-radius: 50%;
+}
+.my-flower-child p{
+   margin: 0 !important;
+   font-size: 20px;
+   font-weight: 500;
+}
+.my-flower-child > div{
+   width: 100%;
+   height: 100%;
+   box-shadow: 8px 0px 0px 0px rgb(0, 206, 0);
+   border-radius: 15px;
+   padding: 10px;
+}
+/* Страница Мои растения Конец */
+.flower-img{
+   width: 160px;
+    border-radius: 50%;
+    height: 160px;
+    transform: translateY(-8px);
+}
+.header-flower{
+  font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+.header-category{
+  text-decoration: overline;
+    font-size: 16.5px;
+}
+.catalog{
+   width: 100%;
+}
+.container-fluid{
+   margin: 0 !important;
+   padding: 0 !important;
+}
+body{
+   width: 100%;
+   font-family: 'Montserrat';
+}
+header{
+   background-color: var(--background_green_0);
+    height: auto;
+    min-height: 90px;
+    font-size: 18px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    color: antiquewhite;
+    filter: drop-shadow(0px 4px 6px #00000050);
+    transition: all 0.2s;
+}
+header a{
+   color: antiquewhite !important;
+}
+header a:hover{
+   color: #c5ff68 !important;
+}
+.user-photo{
+   width: 40px;
+   height: 40px;
+   min-width: 40px;
+   background-color: white;
+   border-radius: 50%;
+   margin-left: 15px;
+   overflow: hidden;
+}
+main{
+   width: 100%;
+   height: auto;
+   color: white;
+}
+.main-block1{
+   width: 100%;
+   height: 800px;
+   background: url(../../gallery/TB-Flower-Pots-scaled.jpg);
+   background-attachment: fixed;
+   background-size: cover;
+   background-repeat: no-repeat no-repeat;
+}
+.main1-text{
+   width: 50%;
+   height: 250px;
+}
+.main1-text h1{
+   font-size: 50px;
+   font-weight: bold;
+}
+.main1-text p{
+   font-size: 20px;
+   line-height: 35px;
+   margin-bottom: 80px;
+}
+.main1-text span{
+   width: 100%;
+}
+.main1-text button{
+   font-size: 26px;
+    text-transform: uppercase;
+    padding: 14px 28px;
+    border: 3px solid lightgreen;
+    margin: 0 10px;
+    margin-bottom: 10px;
+    background-color: #0000005c;
+    color: lightgreen;
+    border-radius: 40px;
+    transition: all 0.25s;
+}
+.main1-text button:hover{
+   transform: scale(1.1);
+   color: #000000;
+   border: 3px solid lightgreen;
+   background-color: lightgreen;
+}
+.main-block2{
+   width: 100%;
+   height: auto;
+   min-height: 590px;
+   background-color: var(--background_black);
+}
+.main2-content{
+   width: 100%;
+   height: auto;
+}
+.main2-contentChild1  h2{
+   font-size: 50px;
+}
+.main2-contentChild1  p{
+   font-size: 20px;
+   margin-top: 20px;
+   line-height: 30px;
+}
+.main2-contentChild2 p{
+   line-height: 20px;
+}
+footer{
+   width: 100%;
+   height: 250px;
+   background-color: #c5ff68;
+}
+footer hr{
+   background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+   background: linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#00ffffff',GradientType=1 );
+   width: 100%;
+   height: 2px;
+   border-radius: 50%;
+   margin-bottom: 13px;
+}
+.transform{
+   transform: translateY(-20px);
+}
